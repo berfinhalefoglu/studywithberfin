@@ -1,0 +1,195 @@
+/* Genel Ayarlar */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Arka Plan Ayarları */
+.background {
+    background-image: url('./images/binary_background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Navigasyon Şeridi */
+/* Genel Navigasyon Stili */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Ortada hizalar */
+    align-items: center;
+    background-color: #333;
+}
+
+nav ul li {
+    position: relative; /* Dropdown pozisyonlaması için gerekli */
+    margin: 0 15px; /* Menü öğeleri arasında boşluk */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #444; /* Hover arka plan rengi */
+    color: #00ff00; /* Hover yazı rengi */
+    border-radius: 5px;
+}
+
+/* Aktif Bağlantı Stili */
+nav ul li a.active {
+    color: #00ff00; /* Aktif sayfanın yazı rengi */
+    text-shadow: 0px 0px 5px #00ff00; /* Hafif ışık efekti */
+    border-bottom: 2px solid #00ff00; /* Alt çizgi efekti */
+}
+
+/* Dropdown Menüsü */
+.dropdown-content {
+    display: none; /* Varsayılan olarak gizli */
+    position: absolute;
+    top: 100%; /* Ana menüden hemen aşağı */
+    left: 0;
+    background-color: #333; /* Dropdown arka plan rengi */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #444; /* Hover arka plan */
+}
+
+/* Dropdown Hover (Görünürlüğü etkinleştirme) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Alt Dropdown Menüsü */
+.dropdown-subcontent {
+    display: none; /* Varsayılan olarak gizli */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Ana dropdown menüden sağa */
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-subcontent a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-subcontent a:hover {
+    background-color: #444;
+}
+
+/* Alt Dropdown Hover */
+.sub-dropdown:hover + .dropdown-subcontent {
+    display: block;
+}
+
+/* Premium Buton Stili */
+.premium {
+    background-color: #ffa500;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.premium:hover {
+    background-color: #ff8c00;
+    color: white;
+}
+
+/* Responsive (Mobil İçin) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Dikey yapar */
+    }
+
+    .dropdown-content {
+        position: static; /* Mobilde pozisyonu sabitler */
+        box-shadow: none;
+    }
+
+    .dropdown-subcontent {
+        position: static; /* Mobilde pozisyonu sabitler */
+    }
+}
+
+/* Courses Buton Stili */
+.courses a {
+    display: inline-block; /* Buton görünümü için */
+    padding: 15px 25px; /* İçerik için boşluk */
+    margin: 10px; /* Butonlar arasında boşluk */
+    background-color: #00ff00; /* Arka plan rengi */
+    color: black; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Yazıyı kalın yap */
+    border-radius: 8px; /* Köşeleri yuvarla */
+    transition: background-color 0.3s, transform 0.2s; /* Hover efekti için geçiş */
+}
+
+.courses a:hover {
+    background-color: #008000; /* Hover sırasında koyu yeşil */
+    color: white; /* Hover sırasında yazı rengi beyaz */
+    transform: scale(1.1); /* Hover sırasında büyüme efekti */
+}
+
+/* Responsive Tasarım için */
+@media (max-width: 768px) {
+    .courses a {
+        display: block; /* Mobilde butonları dikey yap */
+        width: 80%; /* Buton genişliği */
+        margin: 10px auto; /* Ortala */
+    }
+}

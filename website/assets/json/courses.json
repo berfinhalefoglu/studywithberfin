@@ -1,0 +1,39 @@
+{
+    "courses": [
+        {
+            "name": "Design And Analysis Of Algorithms",
+            "topics": ["Asymptotic Analysis", "Divide and Conquer", "Dynamic Programming"],
+            "link": "algorithm.html"
+        },
+        {
+            "name": "Computer Networks",
+            "topics": ["TCP/IP", "Routing Algorithms", "Packet Switching"],
+            "link": "networks.html"
+        },
+        {
+            "name": "Linear Algebra",
+            "topics": ["Matrix Operations", "Eigenvalues", "Vector Spaces"],
+            "link": "linearalgebra.html"
+        },
+        {
+            "name": "Design Patterns",
+            "topics": ["Creational Patterns", "Structural Patterns", "Behavioral Patterns"],
+            "link": "designpatterns.html"
+        },
+        {
+            "name": "Theoretical CS",
+            "topics": ["Automata Theory", "Turing Machines", "Complexity Classes"],
+            "link": "theoreticalcs.html"
+        },
+        {
+            "name": "Software Engineering",
+            "topics": ["Software Development Life Cycle", "Agile Methodologies", "Version Control"],
+            "link": "softwareengineering.html"
+        },
+        {
+            "name": "Programming Languages Projects",
+            "topics": ["Python Projects", "JavaScript Projects", "Java Projects"],
+            "link": "projects.html"
+        }
+    ]
+}

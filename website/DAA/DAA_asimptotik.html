@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asymptotic Notations in Algorithm Analysis</title>
+        <link rel="stylesheet" href="../assets/css/global.css"> <!-- GENEL CSS -->
+        <script src="../navbar.js" defer></script>
+    </head>
+    
+<body>
+    <!-- Navigasyon Çubuğu -->
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../motivation.html">Motivation</a></li>
+                <li><a href="../courses.html">Courses</a></li>
+                <li><a href="../studyplans.html">Study Plans</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- İçerik Alanı -->
+    <main>
+        <div class="container">
+            <h1>Complexity in Algorithm Analysis and Design</h1>
+            <p>Analyses of algorithms involve evaluating the efficiency in terms of execution time and memory usage, focusing on the consumption of resources. Generally, two types of criteria are mostly used:</p>
+            
+            <h2>Time Complexity</h2>
+            <p>Time complexity focuses on how fast an algorithm executes. The input size expresses how the number of operations increases. Big O notation is mostly used, such as O(n) or O(log n).</p>
+
+            <h2>Space Complexity</h2>
+            <p>Indicates how much memory the algorithm uses. This shows how the amount of memory used varies with the input size.</p>
+
+            <h2>Asymptotic Notations in Complexity Analysis of Algorithms</h2>
+
+            <section id="big-o-notation">
+                <h3>Big O Notation (O)</h3>
+                <p>Big O Notation provides an upper bound on the growth rate of an algorithm’s running time or space usage. It represents the worst-case scenario.</p>
+                <p>As an example, if an algorithm’s running time is O(n), that means the algorithm’s running time increases with the input size n or less than n.</p>
+                <img src="../images/bigo.png" alt="Big O Graph" style="width: 100%; max-width: 600px;">
+            </section>
+
+            <section id="omega-notation">
+                <h3>Omega Notation (Ω)</h3>
+                <p>Omega notation provides a lower bound on the growth rate of an algorithm’s running time or space usage. It represents the best-case scenario (opposite of Big O).</p>
+                <p>As an example, if an algorithm’s running time is Ω(n), that means the algorithm’s running time increases with the input size n or more.</p>
+                <img src="../assets/images/omega_graph.png" alt="Omega Graph" style="width: 100%; max-width: 600px;">
+            </section>
+
+            <section id="theta-notation">
+                <h3>Theta Notation (Θ)</h3>
+                <p>Theta notation provides both an upper and lower bound on the growth rate of an algorithm’s running time or space usage. It represents the average-case scenario.</p>
+                <p>As an example, if an algorithm’s running time is Θ(n), that means the running time of the algorithm increases with the input size n.</p>
+                <img src="../assets/images/theta_graph.png" alt="Theta Graph" style="width: 100%; max-width: 600px;">
+            </section>
+
+            <section id="summary-comparison">
+                <h3>Summary Comparison</h3>
+                <ul>
+                    <li><strong>Big O (O):</strong> Upper bound, represents the worst case. The algorithm's running time can grow at this rate at most.</li>
+                    <li><strong>Omega (Ω):</strong> Lower bound, represents the best case. The algorithm's running time will grow at this rate at least.</li>
+                    <li><strong>Theta (Θ):</strong> Both upper and lower bound. The algorithm grows at this rate at most.</li>
+                </ul>
+            </section>
+
+            <section id="example">
+                <h3>Example</h3>
+                <p><strong>Mathematical Approach:</strong> Let's give the running time of an algorithm as T(n) = 3n² + 2n + 1. In this expression, as n grows, the n² term becomes dominant, and therefore the asymptotic behavior of the algorithm is expressed as O(n²).</p>
+                <p><strong>Machine Language Independent Approach:</strong> This analysis is theoretical and independent of language and machine operations. Whether the program is written in Python or C++, it will theoretically have the same O(n²) performance.</p>
+                <p><strong>Analysis in the Case of n → ∞:</strong> For small inputs, the algorithm may seem fast, but in asymptotic analysis, very large values of n are considered. For example, an O(n) algorithm will be more efficient on large datasets compared to an O(n²) algorithm.</p>
+            </section>
+
+            <section id="recurrence-equations">
+                <h3>Recurrence Equations in Algorithm Analysis</h3>
+                <p>Recurrence equations mathematically express the recursive nature of an algorithm. That is, when an algorithm is solved by smaller subproblems, it describes the relationship between these subproblems.</p>
+
+                <h4>Backward Substitution</h4>
+                <ol>
+                    <li>Substitute iteratively</li>
+                    <li>Generalize a formula</li>
+                    <li>Eliminate T function and solve</li>
+                </ol>
+                <p><strong>Example:</strong> For the recurrence T(n) = T(n-1) + 1, let's apply backward substitution:</p>
+                <ul>
+                    <li>T(n-1) = T(n-2) + 1</li>
+                    <li>T(n-2) = T(n-3) + 1 + 1</li>
+                    <li>... and so on until:</li>
+                    <li>T(n) = T(n-i) + i</li>
+                    <li>For i = n, we get T(0) + n</li>
+                    <li>Final Result: T(n) = n</li>
+                </ul>
+
+                <h4>Recursion Tree Method</h4>
+                <p>In the recursion tree method, we represent the recursive calls as a tree where each node is a subproblem. The root is the original problem, and each branch represents smaller subproblems. The total cost is the sum of costs at each level of the tree.</p>
+
+                <h4>Master Theorem</h4>
+                <p>The Master Theorem provides a shortcut to solve recurrence equations of the form:</p>
+                <p>T(n) = aT(n/b) + O(n^d)</p>
+                <p>It gives us the time complexity directly based on the values of a, b, and d.</p>
+            </section>
+
+            <a href="../htmlcourse/design_and_analysis_of_algorithms.html">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Study with Berfin. All rights reserved.</p>
+    </footer>
+</body>
+</html>

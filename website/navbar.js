@@ -1,0 +1,11 @@
+document.getElementById("navbar").innerHTML = `
+    <nav>
+        <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../motivation.html">Motivation</a></li>
+            <li><a href="../courses.html">Courses</a></li>
+            <li><a href="../studyplans.html">Study Plans</a></li>
+            <li><a href="../about.html">About Me</a></li>
+        </ul>
+    </nav>
+`;

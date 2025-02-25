@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Recursive Algorithms</title>
+    <!-- Genel CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <!-- Özel CSS (Varsa) -->
+    <link rel="stylesheet" href="../assets/css/DAA.css">
+    <!-- Navbar JS -->
+    <script src="../navbar.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigasyon Çubuğu -->
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../motivation.html">Motivation</a></li>
+                <li><a href="../courses.html">Courses</a></li>
+                <li><a href="../studyplans.html">Study Plans</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- İçerik Alanı -->
+    <main>
+        <div class="container">
+            <h1>Analysis of Recursive Algorithms</h1>
+            <p>Recursion is a technique where a function calls itself to solve smaller instances of the problem.</p>
+
+            <h2>Key Concepts in Recursion</h2>
+            <ul>
+                <li>Base Case and Recursive Case</li>
+                <li>Recursive Functions</li>
+                <li>Recursion Tree Method</li>
+                <li>Master Theorem</li>
+            </ul>
+
+            <!-- Base Case -->
+            <section id="base-case">
+                <h3>Base Case</h3>
+                <p>The base case stops the recursion. Without it, recursion would continue infinitely.</p>
+                <pre><code>function factorial(n) {
+    if (n === 0) return 1; // Base case
+    return n * factorial(n - 1); // Recursive case
+}</code></pre>
+            </section>
+
+            <!-- Recursion Tree Method -->
+            <section id="recursion-tree">
+                <h3>Recursion Tree Method</h3>
+                <p>This method visualizes recursive calls as a tree structure, with each node representing a subproblem.</p>
+                <img src="../assets/images/recursion_tree.png" alt="Recursion Tree" style="width: 100%; max-width: 600px;">
+            </section>
+
+            <!-- Master Theorem -->
+            <section id="master-theorem">
+                <h3>Master Theorem</h3>
+                <p>The Master Theorem is used to determine the time complexity of recurrence relations:</p>
+                <p><strong>Formula:</strong> T(n) = aT(n/b) + O(n^k)</p>
+                <p>It helps in solving divide-and-conquer algorithms efficiently.</p>
+            </section>
+
+            <!-- Geri Dönüş Linki -->
+            <a href="../htmlcourse/design_and_analysis_of_algorithms.html" class="back-button">← Back to Design and Analysis of Algorithms</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Study with Berfin. All rights reserved.</p>
+    </footer>
+</body>
+</html>

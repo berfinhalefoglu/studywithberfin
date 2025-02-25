@@ -1,0 +1,26 @@
+{
+    "courseName": "Design and Analysis of Algorithms",
+    "topics": [
+        {
+            "name": "Asymptotic Signs and Basic Efficiency Classes",
+            "subtopics": ["Big O", "Little o", "Omega", "Theta"]
+        },
+        {
+            "name": "Analysis of Recursive Algorithms",
+            "subtopics": ["Understanding Recursion", "Master Theorem", "Recurrence Relations"]
+        },
+        {
+            "name": "Algorithmic Strategies",
+            "subtopics": [
+                {
+                    "name": "Brute-force Algorithms",
+                    "details": ["Linear Search", "Bubble Sort"]
+                },
+                {
+                    "name": "Greedy Algorithms",
+                    "details": ["Knapsack Problem", "Huffman Coding"]
+                }
+            ]
+        }
+    ]
+} 
